@@ -28,7 +28,16 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here
+  let scores = {};
+
+  for (const obj of people){
+    if (scores[obj.name] === undefined){
+      scores[obj.name] = obj.score;
+    } else {
+      scores[obj.name] += obj.score;
+    }
+  }
+  return scores;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

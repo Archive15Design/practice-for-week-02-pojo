@@ -10,7 +10,9 @@ restSum(0); // => 0
 ***********************************************************************/
 
 function restSum(...otherNums) {
-  // Your code here
+  const numbers = [ ...otherNums];
+  const sum = numbers.reduce((sum, current) => sum + current);
+  return sum;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

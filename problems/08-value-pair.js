@@ -11,7 +11,20 @@ valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 ***********************************************************************/
 
 function valuePair(obj1, obj2, key) {
-  // Your code here
+  let array = [];
+
+  for (const objKey in obj1){
+    if (`${objKey}` === key){
+      array.push(obj1[`${objKey}`]);
+    }
+  }
+
+  for (const objKey in obj2){
+    if (`${objKey}` === key){
+      array.push(obj2[`${objKey}`]);
+    }
+  }
+  return array;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
